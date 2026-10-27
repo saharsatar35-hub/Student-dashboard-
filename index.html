@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Student Hub</h2>
+            </div>
+
+            <nav class="navigation">
+                <a href="#overview" class="nav-link active">
+                    Dashboard
+                </a>
+
+                <a href="#students" class="nav-link">
+                    Students
+                </a>
+
+                <a href="#registration" class="nav-link">
+                    Add Student
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Learn. Grow. Succeed.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="topbar">
+                <div>
+                    <h1>Students Dashboard</h1>
+                    <p>Track student progress and manage records.</p>
+                </div>
+
+                <div class="profile">
+                    <img
+                        src="https://ui-avatars.com/api/?name=Sahar+Satar&background=4F46E5&color=FFFFFF&size=96&bold=true"
+                        alt="Sahar's profile avatar"
+                        class="profile-avatar"
+                    >
+
+                    <div class="profile-info">
+                        <span class="profile-name">Sahar Satar</span>
+                        <span class="profile-role">Dashboard Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Welcome Section -->
+            <section id="overview" class="welcome-section">
+                <div class="welcome-text">
+                    <p class="eyebrow">STUDENT MANAGEMENT</p>
+                    <h2>Welcome back!</h2>
+
+                    <p>
+                        Every student has the potential to succeed.
+                        Let's track their progress.
+                    </p>
+                </div>
+
+                <div class="welcome-visual"></div>
+            </section>
+
+            <!-- Summary Cards -->
+            <section class="summary-section">
+
+                <article class="summary-card total-card">
+                    <p>Total Students</p>
+                    <h3 id="total-students">0</h3>
+                </article>
+
+                <article class="summary-card passed-card">
+                    <p>Passed Students</p>
+                    <h3 id="passed-students">0</h3>
+                </article>
+
+                <article class="summary-card failed-card">
+                    <p>Failed Students</p>
+                    <h3 id="failed-students">0</h3>
+                </article>
+
+                <article class="summary-card average-card">
+                    <p>Average Score</p>
+                    <h3 id="average-score">0</h3>
+                </article>
+
+            </section>
+
+            <!-- Registration Section -->
+            <section id="registration" class="registration-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Add New Student</h2>
+                        <p>Enter the student's information below.</p>
+                    </div>
+                </div>
+
+                <form id="student-form">
+
+                    <div class="form-group">
+                        <label for="student-name">Student Name</label>
+
+                        <input
+                            type="text"
+                            id="student-name"
+                            placeholder="Enter student name"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course-name">Course Name</label>
+
+                        <input
+                            type="text"
+                            id="course-name"
+                            placeholder="Enter course name"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="student-score">Score</label>
+
+                        <input
+                            type="number"
+                            id="student-score"
+                            placeholder="Enter score (0-100)"
+                            min="0"
+                            max="100"
+                            step="any"
+                        >
+                    </div>
+
+                    <p id="form-message" role="status"></p>
+
+                    <button type="submit" class="submit-button">
+                        + Add Student
+                    </button>
+
+                </form>
+            </section>
+
+            <!-- Student Records -->
+            <section id="students" class="records-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Student Records</h2>
+                        <p>View all registered students and their results.</p>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Student</th>
+                                <th>Course</th>
+                                <th>Score</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="student-table-body">
+                        </tbody>
+                    </table>
+                </div>
+
+                <p id="student-count-label">Showing 0 students</p>
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                <p>StudentHub · Learn. Grow. Succeed.</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
